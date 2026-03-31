@@ -1,0 +1,50 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+.editorial-gradient {
+  background: linear-gradient(135deg, #00346f 0%, #004a99 100%);
+}
+
+.glass-header {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+}
+
+.ghost-border {
+  border: 1px solid rgba(194, 198, 211, 0.15);
+}
+
+.match-meter-ring {
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+section[id] {
+  scroll-margin-top: 110px;
+}
+
+h1, h2, h3, h4, .font-headline {
+  font-family: 'Manrope', sans-serif;
+}
