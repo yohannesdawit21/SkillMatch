@@ -7,6 +7,7 @@ export default function SectionShowcase({
   items,
   initialCount = 6,
   renderCard,
+  previewMode = 'grid',
 }) {
   const [expanded, setExpanded] = useState(false)
   const previewItems = items.slice(0, initialCount)
@@ -36,6 +37,17 @@ export default function SectionShowcase({
         {expanded ? (
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {items.map((item, index) => renderCard(item, index, true))}
+          </div>
+        ) : previewMode === 'carousel' ? (
+          <div className="flex gap-6 overflow-x-auto hide-scrollbar snap-x snap-mandatory pb-2">
+            {previewItems.map((item, index) => (
+              <div
+                key={`${id}-${item.name ?? item.title}-${index}`}
+                className="snap-start shrink-0 w-[85%] sm:w-[360px] lg:w-[340px]"
+              >
+                {renderCard(item, index, false)}
+              </div>
+            ))}
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">

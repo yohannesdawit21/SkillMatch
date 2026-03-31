@@ -317,6 +317,7 @@ export default function LandingPage() {
         items={partnerUniversities}
         initialCount={8}
         renderCard={renderUniversityCard}
+        previewMode="carousel"
       />
 
       <SectionShowcase
